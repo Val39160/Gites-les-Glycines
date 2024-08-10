@@ -40,6 +40,7 @@
 				<div class="col-lg-6 position-relative">
 
 					<img src="assets/images/bg/06.jpg" class="rounded" alt="">
+          <%= image_tag 'imagetest1.jpg', alt: 'Description of the image', class: 'rounded w-100 h-100' %>
 
 					<!-- Svg decoration -->
 					<figure class="position-absolute end-0 bottom-0">
@@ -207,8 +208,68 @@ About START -->
 <section class="pb-0 pb-xl-5 mt-5">
 	<div class="container ">
 		<div class="row g-4 justify-content-between align-items-center">
-			<div class= "col-lg-6">
-      </div>
+			<!-- Left side START -->
+			<div class="col-lg-5 position-relative">
+				<!-- Svg Decoration -->
+				<figure class="position-absolute top-0 start-0 translate-middle z-index-1 ms-4">
+					<svg class="fill-warning" width="77px" height="77px">
+						<path d="M76.997,41.258 L45.173,41.258 L67.676,63.760 L63.763,67.673 L41.261,45.171 L41.261,76.994 L35.728,76.994 L35.728,45.171 L13.226,67.673 L9.313,63.760 L31.816,41.258 L-0.007,41.258 L-0.007,35.725 L31.816,35.725 L9.313,13.223 L13.226,9.311 L35.728,31.813 L35.728,-0.010 L41.261,-0.010 L41.261,31.813 L63.763,9.311 L67.676,13.223 L45.174,35.725 L76.997,35.725 L76.997,41.258 Z"/>
+					</svg>
+				</figure>
+
+				<!-- Svg decoration -->
+				<figure class="position-absolute top-45 bottom-0 end-0 d-none d-md-block mb-n5 me-n4">
+					<svg height="400" class="fill-primary opacity-2" viewBox="0 0 340 340">
+
+					</svg>
+				</figure>
+
+				<!-- Image -->
+
+        <%= image_tag 'test2.jpg', alt: 'Description of the image', class: 'rounded-3 w-100 h-100 fit-cover' %>
+
+				<!-- Client rating START -->
+				<div class="position-absolute bottom-0 start-0 z-index-1 mb-4 ms-5">
+					<div class="bg-body d-flex d-inline-block rounded-3 position-relative p-3">
+
+						<!-- Element -->
+						<!-- <%= image_tag 'imagetest1.jpg', alt: '' , class: 'position-absolute top-0 start-0 translate-middle w-40px'%> -->
+
+						<!-- Avatar group -->
+						<div class="me-4">
+							<h6 class="fw-light">Client</h6>
+							<!-- Avatar group -->
+							<ul class="avatar-group mb-0">
+								<li class="avatar avatar-sm">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
+								</li>
+								<li class="avatar avatar-sm">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="avatar">
+								</li>
+								<li class="avatar avatar-sm">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="avatar">
+								</li>
+								<li class="avatar avatar-sm">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/04.jpg" alt="avatar">
+								</li>
+								<li class="avatar avatar-sm">
+									<div class="avatar-img rounded-circle bg-primary">
+										<span class="text-white position-absolute top-50 start-50 translate-middle small">1K+</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Rating -->
+						<div>
+							<h6 class="fw-light mb-3">Rating</h6>
+							<h6 class="m-0">4.5<i class="fa-solid fa-star text-warning ms-1"></i></h6>
+						</div>
+					</div>
+				</div>
+				<!-- Client rating END -->
+			</div>
+			<!-- Left side END -->
 
 			<!-- Right side START -->
 			<div class="col-lg-6">

@@ -1,13 +1,13 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
   <div class="container-fluid">
     <div class= "logo-section d-flex">
-    <div><%= link_to "#", class: "navbar-brand m-0" do %>
+    <div><%= link_to rooms_path, class: "navbar-brand m-0" do %>
       <%= image_tag 'icons8-wisteria-58.png' , alt: 'Description of the image', class: 'w-75 h-50 mr-1 mt-3 md-3 mb-3' %>
 
 
     <% end %></div>
-    <div><h4 class="home-title title-font mt-2"> Gites des</h4>
-    <h4 class="title-font">Glycines</h4></div>
+
+    <div class = "mt-4"><h5><%= link_to 'Gites des Glycines', rooms_path, class: 'stretched-link text-decoration-none title-font text-success'%></h5></div>
     </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,10 +18,17 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%= link_to "Accueil", rooms_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to "Nos locations", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Centre de bien-être", "#", class: "nav-link" %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to "Nos locations", "#", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

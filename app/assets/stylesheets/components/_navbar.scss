@@ -10,3 +10,12 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.hover-link:hover {
+  color: #528852; /* Change text color on hover */
+
+}
+
+.hover-link {
+  color: $primary; /* Default text color */
+}

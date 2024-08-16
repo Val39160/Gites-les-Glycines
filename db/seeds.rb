@@ -18,7 +18,7 @@ User.create({
 
 puts "Creating rooms..."
 Room.create({
-  :name => "Gite Jonquille",
+  :name => "Gite Jonquille" ,
   :description => "Chambre double avec salle de bain privée",
   :price_per_day => 50.0,
   :average_rating => 4.5

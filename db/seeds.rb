@@ -45,10 +45,4 @@ Room.create({
   :average_rating => 4.0
 })
 
-Room.create({
-  :name => "Gite Mimosa",
-  :description => "Chambre double avec salle de bain privée",
-  :price_per_day => 150.0,
-  :average_rating => 4.5
-})
 puts "Seeding done!"

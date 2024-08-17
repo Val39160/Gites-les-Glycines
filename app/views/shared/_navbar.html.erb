@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
+<div class="navbar navbar-expand-sm shadow-sm navbar-light navbar-lewagon sticky-top">
   <div class="container-fluid">
     <div class= "logo-section d-flex">
     <div><%= link_to rooms_path, class: "navbar-brand m-0" do %>
@@ -22,6 +22,9 @@
           </li>
           <li class="nav-item">
             <%= link_to "Nos locations", "#{rooms_path}#section-target", class: "nav-link hover-link title-font " %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Tarifs", "#", class: "nav-link hover-link title-font " %>
           </li>
           <li class="nav-item">
             <%= link_to "Centre de bien-être", "#", class: "nav-link hover-link title-font " %>

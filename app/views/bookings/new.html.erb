@@ -41,20 +41,21 @@ Page content START -->
 			<div class="col-xl-8">
 				<div class="vstack gap-5">
 					<!-- Hotel information START -->
-					<div class="card shadow">
+					<div class="card shadow bg-white rounded-5">
 						<!-- Card header -->
-						<div class="card-header p-4 border-bottom">
+						<div class="card-header p-4 border-0 bg-white mb-0 rounded-5">
 							<!-- Title -->
-							<h3 class="mb-0"><i class="fa-solid fa-hotel me-2"></i>Hotel Information</h3>
+							<h3 class="mb-0 title-font text-success"><i class="fa-solid fa-hotel me-2 text-success mt-4 "></i>Informations séjour</h3>
 						</div>
 
 						<!-- Card body START -->
 						<div class="card-body p-4">
 							<!-- Card list START -->
-							<div class="card mb-4">
+							<div class="card mb-2 border-0 bg-white">
 								<div class="row align-items-center">
 									<!-- Image -->
 									<div class="col-sm-6 col-md-3">
+                    <%= image_tag "test2.jpg", alt: '', class: 'card-img rounded-5' %>
 										<img src="assets/images/category/hotel/4by3/02.jpg" class="card-img" alt="">
 									</div>
 
@@ -85,7 +86,7 @@ Page content START -->
 							<div class="row g-4">
 								<!-- Item -->
 								<div class="col-lg-4">
-									<div class="bg-light py-3 px-4 rounded-3">
+									<div class="bg-light py-3 px-4 rounded-5">
 										<h6 class="fw-light small mb-1">Check-in</h6>
 										<h5 class="mb-1">4 March 2022</h5>
 										<small><i class="bi bi-alarm me-1"></i>12:30 pm</small>
@@ -94,7 +95,7 @@ Page content START -->
 
 								<!-- Item -->
 								<div class="col-lg-4">
-									<div class="bg-light py-3 px-4 rounded-3">
+									<div class="bg-light py-3 px-4 rounded-5">
 										<h6 class="fw-light small mb-1">Check out</h6>
 										<h5 class="mb-1">8 March 2022</h5>
 										<small><i class="bi bi-alarm me-1"></i>4:30 pm</small>
@@ -113,11 +114,11 @@ Page content START -->
 							<!-- Information END -->
 
 							<!-- Card START -->
-							<div class="card border mt-4">
+							<div class="card border mt-4 rounded-5 bg-white">
 								<!-- Card header -->
-								<div class="card-header border-bottom d-md-flex justify-content-md-between">
-									<h5 class="card-title mb-0">Deluxe Pool View with Breakfast</h5>
-									<a href="#" class="btn btn-link p-0 mb-0">View Cancellation Policy</a>
+								<div class="card-header border-bottom rounded-5 bg-white d-md-flex justify-content-md-between">
+									<h5 class="card-title mb-2 mt-2 title-font text-success">Prestations et Services</h5>
+									<a href="#" class="btn btn-link p-0 mb-2 mt-2">View Cancellation Policy</a>
 								</div>
 
 								<!-- Card body -->
@@ -125,10 +126,10 @@ Page content START -->
 									<h6>Price Included</h6>
 									<!-- List -->
 									<ul class="list-group list-group-borderless mb-0">
-										<li class="list-group-item h6 fw-light d-flex mb-0"><i class="bi bi-patch-check-fill text-success me-2"></i>Free Breakfast and Lunch/Dinner.</li>
-										<li class="list-group-item h6 fw-light d-flex mb-0"><i class="bi bi-patch-check-fill text-success me-2"></i>Great Small Breaks.</li>
-										<li class="list-group-item h6 fw-light d-flex mb-0"><i class="bi bi-patch-check-fill text-success me-2"></i>Free Stay for Kids Below the age of 12 years.</li>
-										<li class="list-group-item h6 fw-light d-flex mb-0"><i class="bi bi-patch-check-fill text-success me-2"></i>On Cancellation, You will not get any refund</li>
+										<li class="list-group-item border-0 bg-white h6 fw-light d-flex mb-0"><i class="bi bi-patch-check-fill text-success me-2"></i>Free Breakfast and Lunch/Dinner.</li>
+										<li class="list-group-item border-0 bg-white h6 fw-light d-flex mb-0"><i class="bi bi-patch-check-fill text-success me-2"></i>Great Small Breaks.</li>
+										<li class="list-group-item border-0 bg-white h6 fw-light d-flex mb-0"><i class="bi bi-patch-check-fill text-success me-2"></i>Free Stay for Kids Below the age of 12 years.</li>
+										<li class="list-group-item border-0 bg-white h6 fw-light d-flex mb-0"><i class="bi bi-patch-check-fill text-success me-2"></i>On Cancellation, You will not get any refund</li>
 									</ul>
 								</div>
 							</div>
@@ -199,11 +200,7 @@ Page content START -->
 							</form>
 							<!-- Form END -->
 
-							<!-- Alert START -->
-							<div class="alert alert-info my-4" role="alert">
-								<a href="sign-up.html" class="alert-heading h6">Login</a> to prefill all details and get access to secret deals
-							</div>
-							<!-- Alert END -->
+
 
 							<!-- Special request START -->
 							<div class="card border mt-4">
@@ -342,30 +339,6 @@ Page content START -->
 													<input type="text" class="form-control" aria-label="name of card holder" placeholder="Enter card holder name">
 												</div>
 
-												<!-- Alert box START -->
-												<div class="col-12">
-													<div class="alert alert-success alert-dismissible fade show my-3" role="alert">
-
-														<!-- Title -->
-														<div class="d-sm-flex align-items-center mb-3">
-															<img src="assets/images/element/12.svg" class="w-40px me-3 mb-2 mb-sm-0" alt="">
-															<h5 class="alert-heading mb-0">$50,000 Covid Cover & More</h5>
-														</div>
-
-														<!-- Content -->
-														<p class="mb-2">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-
-														<!-- Button and price -->
-														<div class="d-sm-flex align-items-center">
-															<a href="#" class="btn btn-sm btn-success mb-2 mb-sm-0 me-3"><i class="fa-regular fa-plus me-2"></i>Add</a>
-															<h6 class="mb-0">$69 per person</h6>
-														</div>
-
-														<!-- Close button -->
-														<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-													</div>
-												</div>
-												<!-- Alert box END -->
 
 												<!-- Buttons -->
 												<div class="col-12">
@@ -484,32 +457,32 @@ Page content START -->
 
 			<!-- Right side content START -->
 			<aside class="col-xl-4">
-				<div class="row g-4">
+				<div class="row g-4 sticky-top z-sticky-card" style="top: 120px">
 
 					<!-- Price summary START -->
-					<div class="col-md-6 col-xl-12">
-						<div class="card shadow rounded-2">
+					<div class="col-md-6 col-xl-12 ">
+						<div class="card shadow rounded-5  bg-white " >
 							<!-- card header -->
-							<div class="card-header border-bottom">
-								<h5 class="card-title mb-0">Price Summary</h5>
+							<div class="card-header border-bottom-0 rounded-5 bg-white mt-2">
+								<h5 class="card-title mb-0 bg-white title-font text-success">Prix Réservation</h5>
 							</div>
 
 							<!-- Card body -->
-							<div class="card-body">
+							<div class="card-body bg-white">
 								<ul class="list-group list-group-borderless">
-									<li class="list-group-item d-flex justify-content-between align-items-center">
+									<li class="list-group-item bg-white border-0 d-flex justify-content-between align-items-center">
 										<span class="h6 fw-light mb-0">Room Charges</span>
 										<span class="fs-5">$28,660</span>
 									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
+									<li class="list-group-item d-flex bg-white border-0 justify-content-between align-items-center">
 										<span class="h6 fw-light mb-0">Total Discount<span class="badge text-bg-danger smaller mb-0 ms-2">10% off</span></span>
 										<span class="fs-5 text-success">-$2,560</span>
 									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
+									<li class="list-group-item d-flex bg-white border-0 justify-content-between align-items-center">
 										<span class="h6 fw-light mb-0">Price after discount</span>
 										<span class="fs-5">$1852</span>
 									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
+									<li class="list-group-item d-flex bg-white border-0 justify-content-between align-items-center">
 										<span class="h6 fw-light mb-0">Taxes % Fees</span>
 										<span class="fs-5">$350</span>
 									</li>
@@ -517,76 +490,16 @@ Page content START -->
 							</div>
 
 							<!-- Card footer -->
-							<div class="card-footer border-top">
+							<div class="card-footer border-top-0 bg-white rounded-5">
 								<div class="d-flex justify-content-between align-items-center">
-									<span class="h5 mb-0">Payable Now</span>
-									<span class="h5 mb-0">$22,500</span>
+									<span class="h5 mb-0 title-font text-success">Payable Now</span>
+									<span class="h5 mb-0 title-font text-success">$22,500</span>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- Price summary END -->
 
-					<!-- Offer and discount START -->
-					<div class="col-md-6 col-xl-12">
-						<div class="card shadow">
-							<!-- Card header -->
-							<div class="card-header border-bottom">
-								<div class="cardt-title">
-									<h5 class="mb-0">Offer &amp; Discount</h5>
-								</div>
-							</div>
-							<!-- Card body -->
-							<div class="card-body">
-
-								<!-- Radio -->
-								<div class="bg-light rounded-2 p-3">
-									<div class="form-check form-check-inline mb-0">
-										<input class="form-check-input" type="radio" name="discountOptions" id="discount1" value="option1" checked>
-										<label class="form-check-label h5 mb-0" for="discount1">GSTBOOK</label>
-										<p class="mb-1 small">Congratulations! You have saved $230 with GSTBOOK.</p>
-										<h6 class="mb-0 text-success">-$230</h6>
-									</div>
-								</div>
-
-								<!-- Input group -->
-								<div class="input-group mt-3">
-									<input class="form-control form-control" placeholder="Coupon code">
-									<button type="button" class="btn btn-primary">Apply</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Offer and discount END -->
-
-					<!-- Information START -->
-					<div class="col-md-6 col-xl-12">
-						<div class="card shadow">
-							<!-- Card header -->
-							<div class="card-header border-bottom">
-								<h5 class="card-title mb-0">Why Sign up or Log in</h5>
-							</div>
-
-							<!-- Card body -->
-							<div class="card-body">
-								<!-- List -->
-								<ul class="list-group list-group-borderless">
-									<li class="list-group-item d-flex mb-0"><i class="fa-solid fa-check text-success me-2"></i>
-										<span class="h6 fw-normal">Get Access to Secret Deal</span>
-									</li>
-
-									<li class="list-group-item d-flex mb-0"><i class="fa-solid fa-check text-success me-2"></i>
-										<span class="h6 fw-normal">Book Faster</span>
-									</li>
-
-									<li class="list-group-item d-flex mb-0"><i class="fa-solid fa-check text-success me-2"></i>
-										<span class="h6 fw-normal">Manage Your Booking</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- Information END -->
 
 				</div>
 			</aside>

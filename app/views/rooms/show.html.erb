@@ -356,28 +356,27 @@ About hotel START -->
 						<!-- Title -->
 						<h4 class="card-title mb-2 mt-2 title-font text-success">Aperçu du séjour</h4>
 					</div>
-					<!-- Card header END -->
 
 					<!-- Card body START -->
-					<div class="card-body">
+					<div class="card-body " >
+               <%= simple_form_for([@room, @booking]) do |f| %>
 
-						<div class="row g-4 mb-3">
-							<!-- Item -->
-							<div class="col-md-6">
-								<div class="bg-light py-3 px-4 rounded-5">
-									<h6 class="fw-light small mb-1">Check-in</h6>
-									<h6 class="mb-0 text-success title-font">4 March 2022</h6>
-								</div>
-							</div>
 
-							<!-- Item -->
-							<div class="col-md-6">
-								<div class="bg-light py-3 px-4 rounded-5">
-									<h6 class="fw-light small mb-1">Check out</h6>
-									<h6 class="mb-0 text-success title-font">8 March 2022</h6>
-								</div>
-							</div>
-						</div>
+
+
+            <div class="row g-4 mb-3" data-controller="datepicker">
+              <!-- Item -->
+              <div class="col-md-12 d-flex">
+                <div class="bg-light py-3 px-4 rounded-5 me-2">
+                  <h5 class="fw-light small mb-1"><i class="fa-solid fa-calendar-check me-2" style="color: #7dc0a3;"></i> Check-in </h5>
+                  <%= f.input :check_in, label: false,  as: :string, input_html: { class: 'rounded-5 mt-3', data: { target: "datepicker.startInput" } } %>
+                </div>
+                <div class="bg-light py-3 px-4 rounded-5">
+                  <h5 class="fw-light small mb-1"><i class="fa-solid fa-calendar-check me-2" style="color: #7dc0a3;"></i> Check-out </h5>
+                  <%= f.input :check_out, label: false, as: :string, input_html: { class: 'rounded-5 mt-3', data: { target: "datepicker.endInput" } } %>
+                </div>
+              </div>
+            </div>
 
 						<!-- List -->
 						<ul class="list-group list-group-borderless mb-3">
@@ -392,7 +391,6 @@ About hotel START -->
 							<li class="list-group-item px-2 d-flex border-0 bg-white justify-content-between">
 								<span class="h6 fw-light mb-0">Services Fee</span>
 								<span class="h6 fw-light mb-0">$100</span>
-							</li>
 							<li class="list-group-item bg-light rounded-4 d-flex justify-content-between px-2 mt-3">
 								<span class="h5 fw-normal mb-0 ps-1">Total</span>
 								<span class="h5 fw-normal mb-0">$13,500</span>
@@ -401,9 +399,10 @@ About hotel START -->
 
 						<!-- Button -->
 						<div class="d-grid gap-2">
-            <%= link_to "Je réserve", new_room_booking_path(room_id: @room.id), class: "btn btn-primary text-white rounded-4 mb-0" %>
-						<%= link_to 'Back', rooms_path, class: 'btn btn-primary rounded-4 text white custom-font-btn-show-2' %>
-
+               <!--<%= f.button :submit, class: 'btn btn-primary rounded-3 text-white custom-font-btn-show-1' %>-->
+              <%= link_to "Je réserve", new_room_booking_path(room_id: @room.id), class: "btn btn-primary rounded-4 text white custom-font-btn-show-2 text-white" %>
+            <%= link_to 'Choisir un autre gite', "#{rooms_path}#section-target", class: 'btn btn-primary rounded-4 text white custom-font-btn-show-2 text-white' %>
+             <% end %>
             </div>
 					</div>
 					<!-- Card body END -->

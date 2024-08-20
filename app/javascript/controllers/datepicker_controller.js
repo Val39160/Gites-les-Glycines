@@ -9,44 +9,35 @@ export default class extends Controller {
   connect() {
     this.fp = flatpickr(this.startInputTarget, {
       mode: "range",
-      locale: "french",
-
-      dateFormat: "j F Y",
+      locale: French,
+      dateFormat: "Y-m-d",  // Utilisation du format ISO compatible avec la classe JavaScript Date
       minDate: "today",
       monthSelectorType: "short",
       onChange: this.handleDateChange.bind(this),
       onReady: this.handleCalendarReady.bind(this),
-
     });
   }
+
   handleDateChange(selectedDates) {
     if (selectedDates.length === 2) {
-      this.startInputTarget.value = selectedDates[0].toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-      this.endInputTarget.value = selectedDates[1].toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+      // Les valeurs sont déjà au format "Y-m-d" compatible avec new Date()
+      this.startInputTarget.value = selectedDates[0].toISOString().split('T')[0];
+      this.endInputTarget.value = selectedDates[1].toISOString().split('T')[0];
+
+      // Déclencher l'événement change manuellement
+      this.startInputTarget.dispatchEvent(new Event('change'));
+      this.endInputTarget.dispatchEvent(new Event('change'));
     }
-    this.customizeStyles(); // Apply custom styles on date change
   }
 
   handleCalendarReady(selectedDates, dateStr, instance) {
     this.setInitialDates(selectedDates);
-    this.customizeStyles();
   }
 
   setInitialDates(selectedDates) {
     if (selectedDates.length === 2) {
-      this.startInputTarget.value = selectedDates[0].toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-      this.endInputTarget.value = selectedDates[1].toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+      this.startInputTarget.value = selectedDates[0].toISOString().split('T')[0];
+      this.endInputTarget.value = selectedDates[1].toISOString().split('T')[0];
     }
-  }
-
-  customizeStyles() {
-    if (!this.fp || !this.fp.calendarContainer) return;
-
-    const selectedDays = this.fp.calendarContainer.querySelectorAll(".flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange");
-    selectedDays.forEach((dayElem) => {
-      dayElem.style.backgroundColor = "#a3d2ae"; // Couleur de fond
-      dayElem.style.borderColor = "#7dc0a3";     // Couleur de bordure
-      dayElem.style.color = "a3d2ae";             // Couleur du texte
-    });
   }
 }

@@ -21,28 +21,32 @@ Room.create({
   :name => "Gite Jonquille" ,
   :description => "Chambre double avec salle de bain privée",
   :price_per_day => 50.0,
-  :average_rating => 4.5
+  :average_rating => 4.5,
+  :number_of_guests => 4
 })
 
 Room.create({
   :name => "Gite Lila",
   :description => "Chambre double avec salle de bain privée",
   :price_per_day => 75.0,
-  :average_rating => 4.0
+  :average_rating => 4.0,
+  :number_of_guests => 4
 })
 
 Room.create({
   :name => "Gite Acacia",
   :description => "Chambre double avec salle de bain privée",
   :price_per_day => 100.0,
-  :average_rating => 4.5
+  :average_rating => 4.5,
+  :number_of_guests => 4
 })
 
 Room.create({
   :name => "Gite Glycine",
   :description => "Chambre double avec salle de bain privée",
   :price_per_day => 125.0,
-  :average_rating => 4.0
+  :average_rating => 4.0,
+  :number_of_guests => 4
 })
 
 puts "Seeding done!"

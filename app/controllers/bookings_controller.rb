@@ -13,9 +13,13 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.room = Room.find(params[:room_id])
+    if @booking.number_of_adults + @booking.number_of_childs > @booking.room.number_of_guests
+      flash[:alert] = "You can't book more guests than the room can host"
+      render :new
+    end
 
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to room_path(@booking.room)
     else
       render :new
     end

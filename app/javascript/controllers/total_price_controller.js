@@ -33,7 +33,7 @@ export default class extends Controller {
         const totalPrice = diffDays * pricePerDay ;
         console.log("Total Price:", totalPrice);
 
-        this.totalPriceTarget.textContent = `${totalPrice} €`;
+        this.totalPriceTarget.value = totalPrice.toFixed(2);
     } else {
         console.error("Invalid dates or order");
     }

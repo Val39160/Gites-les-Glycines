@@ -17,6 +17,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
+
+
           <li class="nav-item active">
             <%= link_to "Accueil", rooms_path, class: "nav-link hover-link title-font " %>
           </li>
@@ -24,16 +26,22 @@
             <%= link_to "Nos locations", "#{rooms_path}#section-target", class: "nav-link hover-link title-font " %>
           </li>
           <li class="nav-item">
-            <%= link_to "Tarifs", "#", class: "nav-link hover-link title-font " %>
+            <%= link_to "Tarifs", tarifs_path, class: "nav-link hover-link title-font " %>
           </li>
           <li class="nav-item">
-            <%= link_to "Centre de bien-être", "#", class: "nav-link hover-link title-font " %>
+            <%= link_to "Centre de bien-être", centre_bien_etre_path , class: "nav-link hover-link title-font " %>
           </li>
 
-          <li class="nav-item dropdown mb-3 mt-2 ms-5">
+             <li class="nav-item active ms-5">
+            <p><strong><%= link_to current_user.first_name, "#" , class: "nav-link" %></strong></p>
+            </li>
+
+          <li class="nav-item dropdown mb-3 mt-2 ms-2">
+
             <i class="fa-solid fa-circle-user fa-2xl" style="color: #528852;" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+              <%= link_to "Mon profil", profile_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>
         <% else %>

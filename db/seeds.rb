@@ -8,12 +8,15 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 puts "Destroying all bookings, reviews, rooms and users..."
+Booking.destroy_all
 Room.destroy_all
 User.destroy_all
 puts "Creating a user..."
 User.create({
   :email => "valentin.corger@gmail.com",
-  :password => "password"
+  :password => "password",
+  :first_name => "Valentin",
+  :last_name => "Corger",
 })
 
 puts "Creating rooms..."

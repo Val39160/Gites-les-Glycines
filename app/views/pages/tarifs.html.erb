@@ -5,13 +5,13 @@
 <!-- =======================
 Main banner START -->
 <section class="price-wrap pt-4 pt-sm-0">
-	<div class="container">
+	<div class="container mb-5">
 		<div class="row">
 			<!-- Title -->
-			<div class="col-xl-10 mx-auto text-center">
-				<h6 class="text-primary">Pricing</h6>
-				<h1 class="mb-2">Plan That Fit Your
-					<span class="position-relative z-index-9">Scale
+			<div class="col-xl-10 mx-auto text-center mt-5">
+				<h4 class="text-primary title-font">Nos Tarifs</h4>
+				<h1 class="mb-2 title-font text-success">Des Gîtes Sur Mesure, Un Séjour
+					<span class="position-relative z-index-9 title-font text-success">Parfait
 						<!-- SVG START -->
 						<span class="position-absolute top-50 start-50 translate-middle z-index-n1 d-none d-sm-block">
 							<svg width="203.94px" height="54.13px" viewBox="0 0 203.94 54.13">
@@ -21,113 +21,23 @@ Main banner START -->
 						<!-- SVG END -->
 					</span>
 				</h1>
-				<p class="lead mb-0">Simple, transparent pricing that grows with you. Try any plan free for 30 days</p>
+				<p class="lead mb-0"></p>
 
-				<!-- Switch START -->
-				<form class="d-flex align-items-center justify-content-center mt-5">
-					<!-- Label -->
-					<span class="h6 mb-0 fw-bold">Monthly</span>
-					<!-- Switch -->
-					<div class="form-check form-switch form-check-lg mx-3 mb-0">
-						<input class="form-check-input mt-0 price-toggle" type="checkbox" id="flexSwitchCheckDefault">
-					</div>
-					<!-- Label -->
-					<div class="position-relative">
-						<span class="h6 mb-0 fw-bold">Yearly</span>
-						<span class="rotate-10 badge text-bg-warning ms-1 position-absolute top-0 start-100 translate-middle mt-n4 ms-n7 ms-sm-n3">10% discount</span>
-					</div>
-				</form>
-				<!-- Switch END -->
+
 			</div>
 		</div> <!-- Row END -->
 
 		<!-- Pricing START -->
 		<div class="row g-4 justify-content-center mt-5">
+
+      <%@rooms.each do |room|%>
 			<!-- Price item START -->
 			<div class="col-md-6 col-lg-4">
-				<div class="card shadow">
+				<div class="card shadow bg-white rounded-5">
 					<!-- Card header -->
-					<div class="card-header d-flex justify-content-between align-items-center border-bottom p-4">
+					<div class="card-header bg-white d-flex rounded-5 justify-content-between align-items-center border-bottom p-4">
 						<div>
-							<h6 class="mb-0">Standard Plan</h6>
-							<div class="hstack gap-2">
-								<span class="h3 plan-price mb-0" data-monthly-price="$20" data-annual-price="$570">$20</span>
-								<span class="h6 fw-light mb-0">/ per user</span>
-							</div>
-						</div>
-						<span class="icon-lg bg-light rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Most Popular">
-							<i class="bi bi-lightning-charge-fill h5 lh-1"></i>
-						</span>
-					</div>
-
-					<!-- Card body -->
-					<div class="card-body p-4">
-						<!-- List -->
-						<ul class="list-unstyled mb-0">
-							<li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Up to 05 users monthly</li>
-							<li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Free 5 host &amp; domain</li>
-							<li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Custom infrastructure</li>
-							<li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Access to all our room</li>
-							<li class="mb-2"><i class="bi bi-x-circle text-danger me-2"></i>24/7 dedicated Support</li>
-							<li class="mb-2"><i class="bi bi-x-circle text-danger me-2"></i>Unlimited updates</li>
-							<li><i class="bi bi-x-circle text-danger me-2"></i>Landing pages &amp; Web widgets</li>
-						</ul>
-					</div>
-
-					<!-- Card footer -->
-					<div class="card-footer p-4 pt-0">
-						<a href="#" class="btn btn-dark w-100 mb-0">Get Started</a>
-					</div>
-				</div>
-			</div>
-			<!-- Price item END -->
-
-			<!-- Price item START -->
-			<div class="col-md-6 col-lg-4">
-				<div class="card border border-primary">
-					<!-- Card header -->
-					<div class="card-header d-flex justify-content-between align-items-center border-bottom p-4">
-						<div>
-							<h6 class="mb-0 text-primary">Professional Plan</h6>
-							<div class="hstack gap-2">
-								<span class="h3 plan-price mb-0" data-monthly-price="$59" data-annual-price="$840">$59</span>
-								<span class="h6 fw-light mb-0">/ per user</span>
-							</div>
-						</div>
-						<span class="icon-lg bg-primary bg-opacity-10 rounded-circle text-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Recommended">
-							<i class="fa-solid fa-rocket"></i>
-						</span>
-					</div>
-
-					<!-- Card body -->
-					<div class="card-body p-4">
-						<!-- List -->
-						<ul class="list-unstyled mb-0">
-							<li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Up to 05 users monthly</li>
-							<li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Free 5 host &amp; domain</li>
-							<li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Custom infrastructure</li>
-							<li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Access to all our room</li>
-							<li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>24/7 dedicated Support</li>
-							<li class="mb-2"><i class="bi bi-x-circle text-danger me-2"></i>Unlimited updates</li>
-							<li><i class="bi bi-x-circle text-danger me-2"></i>Landing pages &amp; Web widgets</li>
-						</ul>
-					</div>
-
-					<!-- Card footer -->
-					<div class="card-footer p-4 pt-0">
-						<a href="#" class="btn btn-primary w-100 mb-0">Get Started</a>
-					</div>
-				</div>
-			</div>
-			<!-- Price item END -->
-
-			<!-- Price item START -->
-			<div class="col-md-6 col-lg-4">
-				<div class="card shadow">
-					<!-- Card header -->
-					<div class="card-header d-flex justify-content-between align-items-center border-bottom p-4">
-						<div>
-							<h6 class="mb-0">Premium Plan</h6>
+							<h3 class="title-font text-primary"><%=room.name%></h3>
 							<div class="hstack gap-2">
 								<span class="h3 plan-price mb-0" data-monthly-price="$99" data-annual-price="$999">$99</span>
 								<span class="h6 fw-light mb-0">/ per user</span>
@@ -153,12 +63,13 @@ Main banner START -->
 					</div>
 
 					<!-- Card footer -->
-					<div class="card-footer p-4 pt-0">
-						<a href="#" class="btn btn-dark w-100 mb-0">Get Started</a>
+					<div class="card-footer p-4 pt-0 bg-white rounded-5 border-0">
+						<a href="#" class="btn btn-primary w-100 mb-0 rounded-4 text-white fs-bold">Je réserve</a>
 					</div>
 				</div>
 			</div>
 			<!-- Price item END -->
+      <%end%>
 		</div>
 		<!-- Pricing END -->
 	</div>

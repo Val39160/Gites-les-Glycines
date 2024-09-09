@@ -1,0 +1,3 @@
+<% unless @booking.paid? || @booking.payment.nil? %>
+  <%= render "payify/payments/form", payment: @booking.payment %>
+<% end %>

@@ -1,0 +1,15 @@
+<div class="container py-5">
+  <div class="mb-4">
+    <h1>Statut de paiement de votre réservation</h1>
+  </div>
+
+  <% if @payment.paid? %>
+    <div class="alert alert-success" role="alert">
+      Paiement réussi !
+    </div>
+  <% else %>
+    <div class="alert alert-danger" role="alert">
+      En attente
+    </div>
+  <% end %>
+</div>

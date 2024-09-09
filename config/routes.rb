@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+ mount Payify::Engine => '/payify', as: 'payify'
+
   devise_for :users
   root to: "rooms#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -9,8 +11,17 @@ Rails.application.routes.draw do
   get "/centre_bien_etre", to: "pages#centre_bien_etre"
   get "/profile", to: "dashboard#user_profile"
 
+
   resources :rooms do
-    resources :bookings
+    resources :bookings do
+
+
+      member do
+        post "payment"
+      end
+
+    end
+
     resources :reviews
   end
 

@@ -1,7 +1,9 @@
 class Booking < ApplicationRecord
   include ::Payify::HasPaymentConcern
+  after_save :create_payment
   belongs_to :room
   belongs_to :user
+
 
 
   validates :check_in, presence: true
@@ -15,8 +17,10 @@ class Booking < ApplicationRecord
   validates :phone_number, presence: true
   validates :civility, presence: true
 
-  after_save :create_payment
+
   def amount_to_pay
     total_price
   end
+
+
 end

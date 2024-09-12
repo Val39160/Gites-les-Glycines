@@ -1,15 +1,9 @@
-<div class="container py-5">
-  <div class="mb-4">
-    <h1>Statut de paiement de votre réservation</h1>
+<% if @payment.paid? %>
+  <div class="alert alert-success" role="alert">
+    <%= I18n.t("payments.complete.paid") %>
   </div>
-
-  <% if @payment.paid? %>
-    <div class="alert alert-success" role="alert">
-      Paiement réussi !
-    </div>
-  <% else %>
-    <div class="alert alert-danger" role="alert">
-      En attente
-    </div>
-  <% end %>
-</div>
+<% else %>
+  <div class="alert alert-danger" role="alert">
+    <%= I18n.t("payments.complete.pending") %>
+  </div>
+<% end %>

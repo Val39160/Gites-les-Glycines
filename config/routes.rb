@@ -14,10 +14,8 @@ Rails.application.routes.draw do
 
   resources :rooms do
     resources :bookings do
-
-
       member do
-        post "payment"
+        get "payment"
       end
 
     end
